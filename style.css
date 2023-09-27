@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300;1,500;1,700&display=swap');
+
+/* Estilos para o corpo da página */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{--red:#d63a25;--white:#fff;--dark: #1e1c2a;}
+
+body {
+    background-color: #000000; /*cor do fundo da pagina*/
+    color: white; /* Defina a cor do texto para melhor legibilidade */
+    margin:0 auto;
+    font-family: sans-serif;
+    
+}
+
+
+
+
+.navigation{
+    background-color: #f1d754;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+/* letras da logo */
+.navigation .logo{
+    color: var(--dark); /* letras da logo em dark*/
+    font-size: 1.7rem;
+    font-weight: 600;/*deixa a letra fina ou grossa, sem unidade de medida*/
+    text-decoration: none;
+}
+.logo span{color: var( --white );}/*letras da logo em branco*/
+
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navigation ul li a{
+    color: #ffffff; /* cor da letra no menu*/
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+/*efeito ao passar o mouser no menu*/
+.navigation ul li a:hover{
+    color: #1d1aadd1;
+    text-decoration: none;
+}
+
+.navigation i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-shadow: 0 0 50px;
+}
+
+
+/* conf. barra de menu */
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--red);
+}
+
+
+/* conf h1 e h2 */
+.intro{
+    margin-top: 50px;
+    text-align:left;
+    grid-column: 1;
+    left: 10px;
+    margin-left: 2rem;
+}
+h1{font-size: 2rem;font-weight: 400;text-shadow: 0 0 20px;}
+h2{font-size: 6rem; font-weight: 400;text-shadow: 0 0 10px;}
+
+/*momentos texto*/
+.container-momentos{background-color: #000000; padding: 20px;}
+.momento-text{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    text-align: justify;
+    margin: 2rem;   
+}
+
+.momento{text-shadow: 0 0 3px;}
+
+/*explosão texto*/
+.text-sabor{padding: 18px;}
+.bolo-text{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:  3rem;
+    text-align: justify;
+    margin: 2rem;
+}
+
+.container{display:grid; grid-template-columns: 1fr 1fr 0.7fr;}
+.louco{text-shadow: 0 0 10px; font-size: 4rem;}
+.sabor{display: grid; font-size: 3rem; grid-template-columns: 1fr 1fr 1fr; margin-left: 2rem;}
+.exp{text-shadow: 0 0 10px; font-size: 6rem;}
+
+/* parallax */
+section{
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+section:nth-of-type(1){
+    background-image: url(img/pratobolovo.jpeg);
+    height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+   }
+
+
+section:nth-of-type(3){
+    background-image: url(img/bolo3.jpg);
+    height: 600px;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* fim do parallax */
+
+
+h3, h4{
+    text-align: center;
+}
+.container-section{
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 1px 1px 4px 0px rgba(255, 255, 255, 0.836);
+    box-shadow: 0px 0px 10px 0px rgba(228, 223, 223, 0.938);
+    padding: 10px;
+    position:relative;
+    z-index: 1;
+    
+}
+.content h6, .paragrafo {color: #ffffff;}
+h6{
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 0 0 4px;
+}
+.content p {font-size: 1.25rem;}
+
+
+
+/* bootstrap card */
+.ultima{padding: 2rem;}
+.card-group {color: #ffffff;justify-content: center; text-align: justify;}
+.bg-black{background-color: #000000;}
+.card-title{text-align: center;}
+
+.card-img-top{margin: 0; display: grid; grid-template-columns: 1fr 1fr 1fr;}
+.img-1, .img-2, .img-3{width: 100%;}
+.img-1{height: auto; grid-column: 1;}
+.img-2{height: auto; grid-column: 2;}
+.img-3{height: auto; grid-column: 3;}
+
+
+/* edição do footer */
+
+footer {
+    width: 100%;
+    color: #f5f5f5;
+    z-index: 999;
+    
+}
+.footer-link {text-decoration: none;}
+
+#footer_content{
+    background-color: #171717;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem; 
+    margin-top: 10rem;
+    
+    
+}
+
+#footer_contacts h1{
+    margin-bottom: 0.75rem;
+}
+
+/* icones */
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+}
+#footer_social_media .footer-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {font-size: 2.25rem;}   /*aumentar o tamanho dos icones*/
+
+#footer_social_media .footer-link:hover{opacity: 0.7; text-decoration: none; text-shadow: 0 0 50px;}/* deixar os icones opaco com brilho e tira a linha que fica embaixo dos icones*/
+
+/* edição das listas */
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* edição das letras das listas */
+.footer-tex{color: #ffffff;}
+.footer-tex:hover{color: #f14a08; text-decoration: none; text-shadow: 0 0 5px;}
+
+#footer_subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#footer_subscribe p {
+    color: #fff;
+}
+
+/* edição barra de email */
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: #f4f1f0;
+    border-radius: 4px;
+}
+
+#input_group input{
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+
+/* edição botao do email */
+#input_group button
+{
+    background-color: #0815ca; 
+    border: none; 
+    padding: 0px 1.25rem; 
+    font-size: 1.125rem; 
+    height: 100%; 
+    border-radius: 0; 
+    cursor: pointer; 
+    transition: all 0.4s;
+
+}
+
+#input_group button:hover{opacity: 0.9;color: #e93e27; }
+
+/* edição do final do footer */
+#footer_copyright{
+    display: flex; 
+    justify-content: center; 
+    background-color: #000000; 
+    font-size: 0.9rem; 
+    padding: 1.5rem; 
+    font-weight: 100;
+}
+
+/* PARTE RESPONSIVO */
+@media(max-width:768px) {
+    /* giro das barras---menu--- */ 
+    .navigation{padding: 18px 20px;}
+    .menu{display: block;}
+    .menu.ativo .bar:nth-child(1){transform: translateY(8px) rotate(45deg);}
+    .menu.ativo .bar:nth-child(2){opacity: 0;}
+    .menu.ativo .bar:nth-child(3){transform: translateY(-8px) rotate(-45deg);}
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: #111111;
+        gap: -10px;
+        transition:  0.3s;
+        
+    }
+    .nav-menu:houver{
+        text-shadow: 30px 30px 80px;
+    }
+    .nav-menu.ativo{right: 0;}
+    .nav-item{margin: 16px 0;}
+
+/* logo */
+    .logo{font-size: 2rem;}
+
+/* h1 e h2 */
+    .intro{display: block;}
+    h1{font-size: 1rem;}
+    h2{font-size: 3rem;}
+
+    .video {
+        width: 100%;
+        height: 36vh;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    /* inicio do parallax */
+    .container{display:grid; grid-template-columns: 1fr 1fr 0.7fr;}
+
+    .frase{font-size: 2rem;}
+    .louco{font-size: 3rem;}
+    
+    section{
+        width: 100%;
+        height: 400px;
+        margin: auto;
+        
+    }
+
+    section:nth-of-type(1){
+        background-image: url(img/pratobolovo.jpeg);
+        height: 300px;  
+    }
+
+    .momento-text, .bolo-text{display: block; gap: 10px; font-size: 12px;}
+    #invisivel-1, #invisivel-2{display: none;}
+
+    .sabor{display: grid; font-size: 2rem; grid-template-columns: 1fr 1fr 0.7fr;}
+
+    .exp{text-shadow: 0 0 10px; font-size: 4rem;}
+
+    section:nth-of-type(3){
+        background-image: url(img/bolo3.jpg);
+        height: 300px;
+    }
+    
+    /* .tirarespaco{
+        margin: 0;
+        padding: 0;
+        min-height: 0;
+        max-height: 0;
+    } */
+    
+/* fim do parallax */
+
+/* bootstrap card */
+.ultima{padding: 3rem;}
+.card-group {color: #ffffff;}
+.bg-black{background-color: #000000; justify-content: center; text-align: justify;}
+.card-title{text-align: center; }
+
+.card-img-top{margin: 2rem;}
+.img-1, .img-2, .img-3{width: 100%;margin: auto;}
+.img-1{height: auto;}
+.img-2{height: 20.5%;}
+.img-3{height: 20.5%;}
+/*fim do bootstrap */
+
+
+/* conf footer */
+footer {
+    width: 100%;
+    color: #f5f5f5;
+    padding-top: 10rem;
+    z-index: 999;
+    
+}
+.footer-link {text-decoration: none;}
+
+#footer_content{
+    background-color: #171717;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem; 
+    margin-top: 12rem;
+ 
+}
+
+#footer_contacts h1{
+    margin-bottom: 0.50rem;
+}
+
+/* icones */
+#footer_social_media {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#footer_social_media .footer-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {font-size: 2rem;}   /*aumentar o tamanho dos icones*/
+
+#footer_social_media .footer-link:hover{opacity: 0.7; text-decoration: none; text-shadow: 0 0 50px;}/* deixar os icones opaco com brilho e tira a linha que fica embaixo dos icones*/
+
+/* edição das listas */
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* edição das letras das listas */
+.footer-tex{color: #ffffff;}
+.footer-tex:hover{color: #f14a08; text-decoration: none; text-shadow: 0 0 5px;}
+
+#footer_subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#footer_subscribe p {
+    color: #fff;
+}
+
+/* edição barra de email */
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: #f4f1f0;
+    border-radius: 4px;
+}
+
+#input_group input{
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+
+/* edição botao do email */
+#input_group button
+{
+    background-color: #0815ca; 
+    border: none; 
+    padding: 0px 1.25rem; 
+    font-size: 1.125rem; 
+    height: 100%;
+    border-radius: 0;
+    cursor: pointer; 
+    transition: all 0.4s;
+
+}
+
+#input_group button:hover{opacity: 0.9;color: #e93e27; }
+
+/* edição do final do footer */
+#footer_copyright{
+    display: flex; 
+    justify-content: center; 
+    background-color: #000000; 
+    font-size: 0.9rem; 
+    padding: 1.5rem; 
+    font-weight: 100;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
